@@ -3,7 +3,8 @@
 # N is the node number of hadoop cluster
 N=$1
 
-if [ $# = 0 ]
+if [ $# = 0 ]  
+# $#: all parameter, this script has 1 para, cannot be no para.
 then
 	echo "Please specify the node number of hadoop cluster!"
 	exit 1
@@ -23,6 +24,6 @@ echo ""
 echo -e "\nbuild docker hadoop image\n"
 
 # rebuild kiwenlau/hadoop image
-sudo docker build -t kiwenlau/hadoop:1.0 .
+sudo docker build -t demenlee/hadoop:v3.1 .
 
 echo ""
